@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pages/info'
+
   devise_for :users
   resources :events
   root :to => redirect('/events')

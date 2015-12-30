@@ -26,19 +26,22 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/"><b>SuffAdvisor</b></a>
+        <a class="navbar-brand" href="/pages/home"><b>SuffAdvisor</b></a>
       </div>
 
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <% if user_signed_in? %>
             <li><a href="/events">Events</a></li>
+              <li><a href="/pubs">Pub's</a></li>
+              <li><a href="/discotheks">Diskotheken</a></li>
             <li><a href="/pages/info">Informationen</a></li>
             <li><%= link_to "Profil", edit_user_registration_path, :class => 'navbar-link'  %></li>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
           <% else %>
-              <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li>
               <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
+              <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li>
+
           <% end %>
         </ul>
       </div>

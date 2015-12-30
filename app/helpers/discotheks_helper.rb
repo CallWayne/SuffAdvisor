@@ -1,0 +1,2 @@
+module DiscotheksHelper
+end

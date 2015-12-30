@@ -1,0 +1,24 @@
+<h1>Diskotheken</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @discotheks.each do |discothek| %>
+      <tr>
+        <td><%= discothek.title %></td>
+        <td><%= link_to 'Show', discothek %></td>
+        <td><%= link_to 'Edit', edit_discothek_path(discothek) %></td>
+        <td><%= link_to 'Destroy', discothek, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+</table>
+
+<br>
+
+<%= link_to 'New Discothek', new_discothek_path %> |
+<%= link_to 'Back', pages_home_path %>

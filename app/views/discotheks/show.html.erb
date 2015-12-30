@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @discothek.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @discothek.description %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @discothek.place %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @discothek.address %>
+</p>
+
+<%= link_to 'Edit', edit_discothek_path(@discothek) %> |
+<%= link_to 'Back', discotheks_path %>

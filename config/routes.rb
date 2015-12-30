@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  resources :pubs
+  resources :discotheks
   get 'pages/info'
+  get 'pages/home'
 
   devise_for :users
   resources :events

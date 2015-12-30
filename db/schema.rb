@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151222211151) do
+ActiveRecord::Schema.define(version: 20151230172400) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "discotheks", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.text     "place"
+    t.text     "address"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "events", force: :cascade do |t|
     t.string   "title"
@@ -23,6 +32,15 @@ ActiveRecord::Schema.define(version: 20151222211151) do
     t.text     "address"
     t.date     "date"
     t.time     "time"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "pubs", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.text     "place"
+    t.text     "address"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

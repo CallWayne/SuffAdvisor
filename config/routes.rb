@@ -5,6 +5,18 @@ Rails.application.routes.draw do
   resources :discotheks
   resources :events
 
+  resources :events do
+    resources :comments
+  end
+
+  resources :pubs do
+    resources :comments
+  end
+
+  resources :discotheks do
+    resources :comments
+  end
+
   devise_for :users
 
   get 'pages/info'

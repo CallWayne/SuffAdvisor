@@ -20,5 +20,42 @@
   <%= @pub.address %>
 </p>
 
+<br>
+<br>
+
+<table class="table table-striped">
+  <tr>
+    <th>Comments</th>
+  </tr>
+
+  <% @pub.comments.each do |comment| %>
+      <tr>
+        <td><strong>Name: </strong><%= comment.commenter %><br>
+          <strong>Comment: </strong><%= comment.body %></td>
+      </tr>
+  <% end %>
+</table>
+
+<br>
+<hr>
+<br>
+
+<strong>Add a comment...</strong>
+<br>
+<br>
+<%= form_for([@pub, @pub.comments.build]) do |f| %>
+    <p>
+      <%= f.label "Name" %><br>
+      <%= f.text_field :commenter %>
+    </p>
+    <p>
+      <%= f.label :body %><br>
+      <%= f.text_area :body %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
+
 <%= link_to 'Edit', edit_pub_path(@pub) %> |
 <%= link_to 'Back', pubs_path %>

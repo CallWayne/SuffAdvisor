@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
+  root :to => redirect('pages/home')
+
   resources :pubs
   resources :discotheks
+  resources :events
+
+  devise_for :users
+
   get 'pages/info'
   get 'pages/home'
 
-  devise_for :users
-  resources :events
-  root :to => redirect('/events')
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

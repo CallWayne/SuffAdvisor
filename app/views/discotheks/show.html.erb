@@ -20,5 +20,48 @@
   <%= @discothek.address %>
 </p>
 
+<br>
+<br>
+
+<table class="table table-striped">
+  <tr>
+    <td><strong>Comments</strong></td>
+  </tr>
+
+
+  <% @discothek.comments.each do |comment| %>
+      <tr>
+        <td><strong>Name: </strong><%= comment.commenter %><br>
+          <strong>Comment: </strong><%= comment.body %><br>
+          <%= link_to 'Delete', [comment.discothek, comment],
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+</table>
+
+<br>
+<hr>
+<br>
+
+<strong>Add a comment...</strong>
+<br>
+<br>
+<%= form_for([@discothek, @discothek.comments.build]) do |f| %>
+    <p>
+      <%= f.label "Name" %><br>
+      <%= f.text_field :commenter %>
+    </p>
+    <p>
+      <%= f.label :body %><br>
+      <%= f.text_area :body %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
+
+<br>
+<br>
 <%= link_to 'Edit', edit_discothek_path(@discothek) %> |
 <%= link_to 'Back', discotheks_path %>

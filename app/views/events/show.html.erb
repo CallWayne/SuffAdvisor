@@ -1,3 +1,6 @@
+<%= javascript_include_tag 'ratyrate.js.erb', "data-turbolinks-track" => false %>
+<p id="notice"><%= notice %></p>
+<div class="well">
 <p>
   <strong>Title:</strong>
   <%= @event.title %>
@@ -27,16 +30,19 @@
   <strong>Time:</strong>
   <%= @event.time %>
 </p>
-
+  </div>
+<div class="well">
 <table border="0" width="200" height="50">
   <tr>
     <td>
 <% if current_user %>
-    Bewertung: <%= rating_for @event, 'score', :disable_after_rate => false, :cancel => false%>
+    <strong>Bewertung:</strong> <%= rating_for @event, 'score', :disable_after_rate => false, :cancel => false%>
 <% end %>
     </td>
   </tr>
 </table>
+</div>
+<br>
 
 <%= render partial: "comments/comments", locals: {commentable: @event} %>
 <%= render partial: "comments/form", locals: {commentable: @event} %>

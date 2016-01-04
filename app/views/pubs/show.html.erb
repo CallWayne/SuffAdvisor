@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<div class="well">
 <p>
   <strong>Title:</strong>
   <%= @pub.title %>
@@ -19,7 +20,19 @@
   <strong>Address:</strong>
   <%= @pub.address %>
 </p>
-
+</div>
+<div class="well">
+<table border="0" width="200" height="50">
+  <tr>
+    <td>
+      <% if current_user %>
+          <strong>Bewertung:</strong> <%= rating_for @pub, 'score', :disable_after_rate => false, :cancel => false%>
+      <% end %>
+    </td>
+  </tr>
+</table>
+</div>
+<br>
 <%= render partial: "comments/comments", locals: {commentable: @pub} %>
 <%= render partial: "comments/form", locals: {commentable: @pub} %>
 

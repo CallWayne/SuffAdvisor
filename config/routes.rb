@@ -1,20 +1,16 @@
 Rails.application.routes.draw do
   root :to => redirect('pages/home')
 
-  resources :pubs
-  resources :discotheks
-  resources :events
-
   resources :events do
-    resources :comments
+    resources :comments, module: :events
   end
 
   resources :pubs do
-    resources :comments
+    resources :comments, module: :pubs
   end
 
   resources :discotheks do
-    resources :comments
+    resources :comments, module: :discotheks
   end
 
   devise_for :users

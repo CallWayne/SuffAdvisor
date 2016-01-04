@@ -20,48 +20,8 @@
   <%= @pub.address %>
 </p>
 
-<br>
-<br>
+<%= render partial: "comments/comments", locals: {commentable: @pub} %>
+<%= render partial: "comments/form", locals: {commentable: @pub} %>
 
-<table class="table table-striped">
-  <tr>
-    <td><strong>Comments</strong></td>
-  </tr>
-
-
-  <% @pub.comments.each do |comment| %>
-      <tr>
-        <td><strong>Name: </strong><%= comment.commenter %><br>
-          <strong>Comment: </strong><%= comment.body %><br>
-          <%= link_to 'Delete', [comment.pub, comment],
-                      method: :delete,
-                      data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-  <% end %>
-</table>
-
-<br>
-<hr>
-<br>
-
-<strong>Add a comment...</strong>
-<br>
-<br>
-<%= form_for([@pub, @pub.comments.build]) do |f| %>
-    <p>
-      <%= f.label "Name" %><br>
-      <%= f.text_field :commenter %>
-    </p>
-    <p>
-      <%= f.label :body %><br>
-      <%= f.text_area :body %>
-    </p>
-    <p>
-      <%= f.submit %>
-    </p>
-<% end %>
-
-<br>
-<br>
 <%= link_to 'Edit', edit_pub_path(@pub) %> |
 <%= link_to 'Back', pubs_path %>

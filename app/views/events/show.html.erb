@@ -28,48 +28,8 @@
   <%= @event.time %>
 </p>
 
-<br>
-<br>
+<%= render partial: "comments/comments", locals: {commentable: @event} %>
+<%= render partial: "comments/form", locals: {commentable: @event} %>
 
-<table class="table table-striped">
-  <tr>
-    <td><strong>Comments</strong></td>
-  </tr>
-
-
-  <% @event.comments.each do |comment| %>
-      <tr>
-        <td><strong>Name: </strong><%= comment.commenter %><br>
-          <strong>Comment: </strong><%= comment.body %><br>
-          <%= link_to 'Delete', [comment.event, comment],
-                      method: :delete,
-                      data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-  <% end %>
-</table>
-
-<br>
-<hr>
-<br>
-
-<strong>Add a comment...</strong>
-<br>
-<br>
-<%= form_for([@event, @event.comments.build]) do |f| %>
-    <p>
-      <%= f.label "Name" %><br>
-      <%= f.text_field :commenter %>
-    </p>
-    <p>
-      <%= f.label :body %><br>
-      <%= f.text_area :body %>
-    </p>
-    <p>
-      <%= f.submit %>
-    </p>
-<% end %>
-
-<br>
-<br>
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

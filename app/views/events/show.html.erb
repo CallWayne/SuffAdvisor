@@ -28,6 +28,10 @@
   <%= @event.time %>
 </p>
 
+<% if current_user %>
+    Bewertung: <%= rating_for @event, 'score', :disable_after_rate => false, :cancel => false%>
+<% end %>
+
 <%= render partial: "comments/comments", locals: {commentable: @event} %>
 <%= render partial: "comments/form", locals: {commentable: @event} %>
 

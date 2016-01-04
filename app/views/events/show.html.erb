@@ -28,9 +28,15 @@
   <%= @event.time %>
 </p>
 
+<table border="0" width="200" height="50">
+  <tr>
+    <td>
 <% if current_user %>
     Bewertung: <%= rating_for @event, 'score', :disable_after_rate => false, :cancel => false%>
 <% end %>
+    </td>
+  </tr>
+</table>
 
 <%= render partial: "comments/comments", locals: {commentable: @event} %>
 <%= render partial: "comments/form", locals: {commentable: @event} %>

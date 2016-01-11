@@ -1,10 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= @discothek.title %></h1>
 <div class="well">
-<p>
-  <strong>Title:</strong>
-  <%= @discothek.title %>
-</p>
 
 <p>
   <strong>Description:</strong>
@@ -21,6 +18,8 @@
   <%= @discothek.address %>
 </p>
 </div>
+
+<% if current_user %>
 <div class="well">
 <table border="0" width="200" height="50">
   <tr>
@@ -37,4 +36,6 @@
 <%= render partial: "comments/form", locals: {commentable: @discothek} %>
 
 <%= link_to 'Edit', edit_discothek_path(@discothek) %> |
+<% end %>
+
 <%= link_to 'Back', discotheks_path %>

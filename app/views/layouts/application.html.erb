@@ -2,9 +2,10 @@
 <html>
 <head>
   <title>SuffAdvisor</title>
-  <link rel="stylesheet" href="//railsgirls.com/assets/bootstrap.css">
-  <link rel="stylesheet" href="//railsgirls.com/assets/bootstrap-theme.css">
+  <%= stylesheet_link_tag    'bootstrap.css'%>
+  <%= stylesheet_link_tag    'bootstrap-theme.css'%>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'bootstrap.js'%>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -67,6 +68,5 @@
       Logged in as <strong><%= current_user.email %></strong>
   <% end %>
   </footer>
-<script src="//railsgirls.com/assets/bootstrap.js"></script>
 </body>
 </html>

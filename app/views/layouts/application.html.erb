@@ -17,22 +17,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'jquery.js' %>
   <%= javascript_include_tag 'bootstrap.min.js' %>
-
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
-<% end %>
-
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -43,19 +30,19 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
-            <li><%= link_to "Profil", edit_user_registration_path, :class => 'navbar-link' %></li>
-            <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
-            <li><a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a></li>
+            <li><a href="#menu-toggle" class="navbar-link" id="menu-toggle">Menü</a></li>
         <% else %>
-            <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link' %></li>
-            <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %></li>
-            <li> <a href="#menu-toggle" class="navbar-link" id="menu-toggle">Toggle Menu</a></li>
-
+            <li><a href="#menu-toggle" class="navbar-link" id="menu-toggle">Menü</a></li>
         <% end %>
       </ul>
       <p class="navbar-text pull-right">
         <% if user_signed_in? %>
-            <%= current_user.email %>
+            <%= current_user.email %></li>  |
+            <%= link_to "Profil", edit_user_registration_path, :class => 'navbar-link' %>  |
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
+        <% else %>
+            <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>  |
+            <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %>
         <% end %>
     </div>
   </div>
@@ -66,11 +53,7 @@
   <!-- Sidebar -->
   <div id="sidebar-wrapper">
     <ul class="sidebar-nav">
-      <li class="sidebar-brand">
-        <a href="#">
-          Start Bootstrap
-        </a>
-      </li>
+      <br>
       <li>
         <a href="/events">Events</a>
       </li>
@@ -100,6 +83,12 @@
         <div class="col-lg-12">
 
           <div class="container">
+            <% if notice %>
+                <p class="alert alert-success"><%= notice %></p>
+            <% end %>
+            <% if alert %>
+                <p class="alert alert-danger"><%= alert %></p>
+            <% end %>
             <%= yield %>
           </div>
 

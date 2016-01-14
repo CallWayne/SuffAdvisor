@@ -400,7 +400,7 @@ h6,
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
     line-height: 1.1;
-    color: inherit;
+    color: #ffff;
 }
 
 h1 small,
@@ -429,7 +429,7 @@ h6 .small,
 .h6 .small {
     font-weight: normal;
     line-height: 1;
-    color: #999999;
+    color: #ffff;
 }
 
 h1,

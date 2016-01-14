@@ -1,12 +1,6 @@
 <h1>Veranstaltungen</h1>
-
+<div class="well">
 <table class="table table-striped">
-    <tr>
-      <th>Title</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
 
     <% @events.each do |event| %>
       <tr>
@@ -35,3 +29,4 @@
 <% end %>
 
 <%= link_to 'Back', pages_home_path %>
+</div>

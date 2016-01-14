@@ -1,5 +1,5 @@
 <%= form_for [commentable, Comment.new] do |f| %>
-    <div>
+    <div class="well">
       <%= f.text_area :body, class: "form_contol", placeholder: "Add a comment" %>
     </div>
     <%= f.submit %>

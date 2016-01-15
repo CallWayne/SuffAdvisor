@@ -13,8 +13,8 @@ img {
     width: 10%;
     height: 10%;
 }
-h1 {
-    color: white;
+h1,h2,h3 {
+    color: #f5f5f5;
 }
 
 div.fixed {

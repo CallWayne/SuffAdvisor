@@ -4,7 +4,8 @@ class PubsController < ApplicationController
   # GET /pubs
   # GET /pubs.json
   def index
-    @pubs = Pub.all
+    @search = Pub.search(params[:q])
+    @pubs = @search.result
   end
 
   # GET /pubs/1

@@ -4,7 +4,8 @@ class DiscotheksController < ApplicationController
   # GET /discotheks
   # GET /discotheks.json
   def index
-    @discotheks = Discothek.all
+    @search = Discothek.search(params[:q])
+    @discotheks = @search.result
   end
 
   # GET /discotheks/1

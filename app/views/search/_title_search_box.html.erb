@@ -1,0 +1,9 @@
+<% content_for :search do %>
+    <div>
+      <%= search_form_for @search do |f| %>
+          <%= f.text_field :title_cont, class: "radius-left expand", placeholder: "" %>
+
+            <%= f.submit "Search", class: "radius-right button" %>
+          </div>
+      <% end %>
+<% end %>

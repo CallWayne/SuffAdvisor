@@ -31,11 +31,7 @@
 
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <% if user_signed_in? %>
             <li><a href="#menu-toggle" class="navbar-link" id="menu-toggle">Menü</a></li>
-        <% else %>
-            <li><a href="#menu-toggle" class="navbar-link" id="menu-toggle">Menü</a></li>
-        <% end %>
       </ul>
       <p class="navbar-text pull-right">
         <% if user_signed_in? %>
@@ -46,6 +42,7 @@
             <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>  |
             <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %>
         <% end %>
+
     </div>
   </div>
 </nav>
@@ -66,13 +63,10 @@
         <a href="/discotheks">Discotheken</a>
       </li>
       <li>
-        <a href="#">About</a>
+        <a href="/pages/info">About</a>
       </li>
       <li>
-        <a href="#">Services</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
+        <a href="/pages/contact">Contact</a>
       </li>
     </ul>
   </div>

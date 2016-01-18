@@ -35,8 +35,8 @@
 <%= render partial: "comments/comments", locals: {commentable: @discothek} %>
 <%= render partial: "comments/form", locals: {commentable: @discothek} %>
 
-<%= link_to 'Edit', edit_discothek_path(@discothek) %> |
+<%= link_to 'Edit', edit_discothek_path(@discothek), :class => "btn btn-default" %>
 <% end %>
 
-<%= link_to 'Back', discotheks_path %>
+<%= link_to 'Back', discotheks_path, :class => "btn btn-default" %>
 </div>

@@ -4,16 +4,16 @@
 
     <% @events.each do |event| %>
       <tr>
-        <td><%= event.title %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><% if current_user.present? %>
-              <%= link_to 'Edit', edit_event_path(event) %>
+        <td><h5><%= event.title %></h5></td>
+        <td><%= link_to 'Show', event, :class => "btn btn-default" %>
+        <% if current_user.present? %>
+              <%= link_to 'Edit', edit_event_path(event), :class => "btn btn-default" %>
           <% else %>
               &nbsp;
           <% end %>
-        </td>
-        <td><% if current_user.present? %>
-              <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+        <% if current_user.present? %>
+              <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default" %>
             <% else %>
               &nbsp;
             <% end %>
@@ -25,8 +25,9 @@
 <br>
 
 <% if current_user %>
-<%= link_to 'New Event', new_event_path %> |
+<%= link_to 'New Event', new_event_path,  :class => "btn btn-default" %>
 <% end %>
 
-<%= link_to 'Back', pages_home_path %>
+  <%= link_to 'Back', pages_home_path, :class => "btn btn-default" %>
+
 </div>

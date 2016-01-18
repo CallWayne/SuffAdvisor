@@ -1,25 +1,19 @@
 <h1>Diskotheken</h1>
 <div class="well">
 <table class="table table-striped">
-  <tr>
-    <th>Title</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
   <% @discotheks.each do |discothek| %>
       <tr>
-        <td><%= discothek.title %></td>
-        <td><%= link_to 'Show', discothek %></td>
-        <td><% if current_user.present? %>
-              <%= link_to 'Edit', edit_discothek_path(discothek) %>
+        <td><h5><%= discothek.title %></h5></td>
+        <td><%= link_to 'Show', discothek, :class => "btn btn-default" %>
+        <% if current_user.present? %>
+              <%= link_to 'Edit', edit_discothek_path(discothek), :class => "btn btn-default" %>
           <% else %>
               &nbsp;
           <% end %>
-        </td>
-        <td><% if current_user.present? %>
-              <%= link_to 'Destroy', discothek, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+        <% if current_user.present? %>
+              <%= link_to 'Destroy', discothek, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default" %>
           <% else %>
               &nbsp;
           <% end %>
@@ -31,8 +25,8 @@
 <br>
 
 <% if current_user %>
-<%= link_to 'New Discothek', new_discothek_path %> |
+<%= link_to 'New Discothek', new_discothek_path, :class => "btn btn-default" %>
 <% end %>
 
-<%= link_to 'Back', pages_home_path %>
+<%= link_to 'Back', pages_home_path, :class => "btn btn-default" %>
 </div>

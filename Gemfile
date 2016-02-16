@@ -7,8 +7,7 @@ gem 'ransack'
 gem 'gmaps4rails'
 gem 'underscore-rails'
 gem 'geocoder'
-gem 'cancancan'
-gem 'rolify'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

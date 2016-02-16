@@ -6,8 +6,12 @@ class DiscotheksController < ApplicationController
   def index
     @search = Discothek.search(params[:q])
     @discotheks = @search.result
+    @hash = Gmaps4rails.build_markers(@discotheks) do |discothek, marker|
+      marker.lat discothek.latitude
+      marker.lng discothek.longitude
+      marker.infowindow discothek.title
+    end
   end
-
   # GET /discotheks/1
   # GET /discotheks/1.json
   def show

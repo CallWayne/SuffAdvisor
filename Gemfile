@@ -4,6 +4,9 @@ gem 'devise'
 gem 'ratyrate'
 gem 'heroku'
 gem 'ransack'
+gem 'gmaps4rails'
+gem 'underscore-rails'
+gem 'geocoder'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

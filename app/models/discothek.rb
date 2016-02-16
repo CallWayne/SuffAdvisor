@@ -3,4 +3,11 @@ class Discothek < ActiveRecord::Base
   validates :title, presence: true,
             length: { minimum: 5 }
   ratyrate_rateable 'score'
+  geocoded_by :geo
+  after_validation :geocode
+
+  def geo
+    [place, address].compact.join(', ')
+  end
 end
+

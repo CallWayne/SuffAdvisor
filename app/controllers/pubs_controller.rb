@@ -6,6 +6,11 @@ class PubsController < ApplicationController
   def index
     @search = Pub.search(params[:q])
     @pubs = @search.result
+    @hash = Gmaps4rails.build_markers(@pubs) do |pub, marker|
+      marker.lat pub.latitude
+      marker.lng pub.longitude
+      marker.infowindow pub.title
+    end
   end
 
   # GET /pubs/1

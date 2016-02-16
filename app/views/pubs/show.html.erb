@@ -24,7 +24,7 @@
   <tr>
     <td>
       <% if current_user %>
-          <strong>Bewertung:</strong> <%= rating_for @pub, 'score', :disable_after_rate => false, :cancel => false%>
+          <strong>Bewertung:</strong> <%= rating_for @pub, 'score', :disable_after_rate => true, :cancel => false%>
       <% end %>
     </td>
   </tr>

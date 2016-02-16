@@ -2,6 +2,7 @@
 
 <% commentable.comments.each do |comment| %>
     <div class="well">
-      <%= comment.body %>
+      <b>From: </b><%= comment.username %><br>
+      <b>Comment: </b><%= comment.body %>
     </div>
 <% end %>

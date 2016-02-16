@@ -47,6 +47,7 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (8.2.1)
+    cancancan (1.13.1)
     coderay (1.1.0)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -158,6 +159,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
+    rolify (5.0.0)
     rubyzip (1.1.7)
     sass (3.4.20)
     sass-rails (5.0.4)
@@ -205,6 +207,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   byebug
+  cancancan
   coffee-rails (~> 4.1.0)
   devise
   geocoder
@@ -216,6 +219,7 @@ DEPENDENCIES
   rails (= 4.2.5)
   ransack
   ratyrate
+  rolify
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

@@ -9,5 +9,6 @@ class Event < ActiveRecord::Base
   def geo
     [place, address].compact.join(', ')
   end
+  resourcify
 end
 

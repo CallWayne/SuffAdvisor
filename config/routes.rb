@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
-  root :to => redirect('pages/home')
+  root :to => 'pages#home'
 
   resources :events do
     resources :comments, module: :events

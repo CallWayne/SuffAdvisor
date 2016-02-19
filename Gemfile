@@ -7,6 +7,7 @@ gem 'ransack'
 gem 'gmaps4rails'
 gem 'underscore-rails'
 gem 'geocoder'
+gem 'rails_12factor'
 
 
 

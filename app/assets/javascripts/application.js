@@ -14,8 +14,8 @@
 //= require jquery_ujs
 //= require jquery.raty
 //= require ratyrate
-//= require_tree .
 //= require underscore
 //= require gmaps/google
 //= require gmaps4rails/gmaps4rails.googlemaps
 //= require gmaps4rails/gmaps4rails.base
+//= require_tree .

@@ -1,7 +1,10 @@
+
 <%= form_for [commentable, Comment.new] do |f| %>
     <div class="well">
-      <%= f.text_area :body, class: "form_contol", placeholder: "Add a comment" %>
+        <%= f.text_area :body, class: "form_contol", placeholder: "Add a comment", id:"textarea_comment" %>
+      </label>
     </div>
     <%= f.submit%>
 <% end %>
+
 <br>

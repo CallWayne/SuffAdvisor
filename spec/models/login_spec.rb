@@ -1,4 +1,4 @@
-# spec/models/event_spec.rb
+# spec/models/login_spec.rb
 require 'spec_helper'
 
 describe 'Sign in' do

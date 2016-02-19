@@ -1,4 +1,4 @@
-# spec/models/event_spec.rb
+# spec/models/signup_spec.rb
 require 'spec_helper'
 
 describe 'Sign up' do

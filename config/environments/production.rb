@@ -7,6 +7,7 @@ Rails.application.configure do
   config.assets.compile = true
   config.assets.digest = true
   config.serve_static_assets = true
+  config.assets.precompile += %w( gmaps4rails.css )
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers

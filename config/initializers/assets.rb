@@ -9,6 +9,8 @@ Rails.application.config.assets.precompile += %w( jquery.js )
 Rails.application.config.assets.precompile += %w( bootstrap.min.js )
 Rails.application.config.assets.precompile += %w( jquery.raty.js )
 Rails.application.config.assets.precompile += %w( underscore.js )
+Rails.application.config.assets.precompile += %w( jquery-1.9.1.min.js )
+Rails.application.config.assets.precompile += %w(jssor.slider.mini.js )
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
 

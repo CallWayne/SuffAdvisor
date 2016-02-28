@@ -51,6 +51,7 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'faker'
+  gem 'seed_dump'
   # gem "capybara-webkit"
 end
 

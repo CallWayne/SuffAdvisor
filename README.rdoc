@@ -1,11 +1,11 @@
-**SuffAdvisor**
+*SuffAdvisor*
 ____________________________________________________________________________
 
-Projektinformationen:
+*Projektinformationen:*
 -	Ruby Version : ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-linux]
 -	Rails Version: '4.2.5'
 
-Wie erstelle ich die Datenbank sowie starten des Servers:
+*Wie erstelle ich die Datenbank sowie starten des Servers:*
 
 1.	Bundle install
 2.	Rake db:setup sollte folgende Schritte direkt ausführen
@@ -20,13 +20,13 @@ iii.	Dann Rake db:setup
 5.	User 1: erster-nutzer@mail.de Passwort: passwort
 6.	User 2: zweiter-nutzer@mail.de Passwort: passwort
 
-Was darf ein User/Gast?
+*Was darf ein User/Gast?*
 -	Alles was ein Gast oder ein User darf steht in der Datei „UserStories.pdf“
 
-Testfälle:
+*Testfälle:*
 -	Testfälle können mit „Rspec spec/“ ausgeführt werden.
 
-Funktionalität der Seite:
+*Funktionalität der Seite:*
 -	User anlegen
 o	User Stories beschreibt die Rechte des Users
 o	Nach erfolgreicher Registration ist man automatisch eingeloggt
@@ -41,9 +41,9 @@ o	Address= Straßenname + PLZ
 -	Editierung des Profils ist möglich, löschen des Accounts ebenfalls
 -	Ausloggen ist möglich
 
-Übersicht der wichtigtens Gems:
+*Übersicht der wichtigtens Gems:*
 ```
--	Allgemeine
+*Allgemeine*
 
 o	Rails		4.2.5
 o	pg		0.15
@@ -56,7 +56,7 @@ o	Jbuilder	2.0
 o	Sdoc		0.4.0
 ```
 ```
--	Weitere für die funktionlität der Seite
+*Weitere für die funktionlität der Seite*
 
 o	Devise
 o	Ratyrate
@@ -67,7 +67,7 @@ o	Underscore-rails
 o	Geocoder
 o	Rails_12factor
 ```
-Projektänderungen/ Change Log:
+*Projektänderungen/ Change Log:*
 
 Versionsnummern wurden nicht mitgeführt.
 ```

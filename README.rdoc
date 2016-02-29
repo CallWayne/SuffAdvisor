@@ -10,21 +10,15 @@ Wie erstelle ich die Datenbank sowie starten des Servers:
 1.	Bundle install
 
 2.	Rake db:setup sollte folgende Schritte direkt ausführen
-
 a.	Rake db:create
-
 i.	Funktioniert db:create nicht dann folgenden befehl:
-
 ii.	(sudo -u postgres create db -O we2 SuffAdvisor_test)
-
 iii.	Dann Rake db:setup
 
 3.	Rails server
-
 4.	Wurde rake db:setup ausgeführt werden Kommentare, Events, Discotheken und 2 User geladen,
-die sich in der Seeds.rb befinden
+    die sich in der Seeds.rb befinden
 5.	User 1: erster-nutzer@mail.de Passwort: passwort
-
 6.	User 2: zweiter-nutzer@mail.de Passwort: passwort
 
 Was darf ein User/Gast?
@@ -72,7 +66,9 @@ o	Geocoder
 o	Rails_12factor
 
 Projektänderungen/ Change Log:
+
 Versionsnummern wurden nicht mitgeführt.
+
 -	Gestaltung des Loginverfahren
 -	Einführung weiterer Gems wie z.B. „Better Errors“
 -	Erste Designanpassungen

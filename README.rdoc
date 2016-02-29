@@ -1,4 +1,4 @@
-SuffAdvisor
+**SuffAdvisor**
 ____________________________________________________________________________
 
 Projektinformationen:

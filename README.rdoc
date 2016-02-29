@@ -1,1 +1,105 @@
 *SuffAdvisor*
+
+*Projektinformationen*
+
+- Ruby Version : ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-linux]
+- Rails Version 4.2.5
+
+Wie erstelle ich die Datenbank sowie starten des Servers:
+
+1. Bundle install
+2. rake db:setup 
+3. rails server
+
+Wurde rake db:setup ausgefuehrt so wurden Kommentare, Events , Discotheken , Pubs und 2 User geladen
+
+- User 1: erster-nutzer@mail.de:passwort
+- User 2: zweiter-nutzer@mail.de:passwort
+
+Was darf ein User/Gast?
+
+- Alles was ein User/Gast darf steht in der "UserStories.pdf"
+
+Testfälle:
+
+- Testfälle können mit "Rspec spec/" durchgefuehrt werden
+
+Funktionalität der Seite:
+
+- User anlegen 
+(User Stories beschreiben die Rechte des Users, nach erfolgreicher Registration ist ein Gast direkt als User angemeldet)
+- Diskothek anlegen per Angabe von Adresse
+- Diskothek wird per Google Maps angezeigt
+- Ebenfalls möglich ist das Anlegen eines Events oder Pubs.
+
+Das Anlegen:
+
+- Title = Benoetigt mind. 5 stelligen Titel
+- Discription= Beschreibung 
+- Place= Ort wie z.B. Muenster
+- Address= Strassenname + PLZ
+
+- Es ist möglich Kommentare oder eine Bewertung( z.B. 3 von 5 Punkten) zu den Events/ Pubs oder Diskotheken abzugeben
+- Editierung des Profils ist möglich, löschen des Accounts ebenfalls
+- Ausloggen ist möglich
+
+Uebersicht wichtiger Gems:
+
+Allgemeine:
+
+- Rails   4.2.5
+- pg 0.15
+- sass-rails 5.0
+- Uglifier 1.3.0
+- Coffee-rails 4.1.0
+- Jquery-rails
+- Turbolinks
+- Jbuilder
+- sdoc 0.4.0
+
+Fuer die Funktionalitaet der Seite:
+
+- Devise
+- Ratyrate
+- Heroku
+- Ransack
+- Gmaps4rails
+- Underscore-rails
+- Geocoder
+- Rails_12factor
+
+Projektaenderungen/ Change Logs:
+
+Versionsnummer nicht mitgefuehrt!
+
+- Gestaltung des Loginverfahren
+- Einführung weiterer Gems wie z.B. „Better Errors“
+- Erste Designanpassungen
+- Erstellung weiterer Views, wie Discotheken pubs
+- Weitere Design Verbesserungen
+- Einführung der Kommentarfunktion
+- Einstellungen, was darf ein User, was nicht( Sichtbarkeit)
+- Ratyrate , für die Bewertungen
+- Designanpassung der Bewertungen
+- Bootstrap hinzugefügt
+- Sidebar hinzugefügt
+- Neue Bewertung per Bierkrug Icon
+- Überschriften wurden dem Design angepassst
+- Sidebar wurde wieder entfernt, da es nicht mit verschiedenen Auflösungen kompatibel war
+- Eine Suche wurde eingebaut
+- Kommentare werden nun mit einem Usernamen(Email) versehen
+- Bugfixes
+- Testfälle wurden implementiert
+- Gemfile überarbeitet
+- Heroku gem hinzugefügt
+- Discotheken werden per google maps hinzugefügt
+- Mehrere Heroku fixes
+- Überarbeitung der Start Seite
+- Slideshow auf startseite implementiert
+- Texte/Inhalte wie „Impressum“ oder „Über Uns“ in Englisch hinzugefügt
+- User Stories hinzugefügt
+
+ 
+
+
+

@@ -8,7 +8,6 @@ Projektinformationen:
 Wie erstelle ich die Datenbank sowie starten des Servers:
 
 1.	Bundle install
-
 2.	Rake db:setup sollte folgende Schritte direkt ausführen
 a.	Rake db:create
 i.	Funktioniert db:create nicht dann folgenden befehl:
@@ -43,8 +42,9 @@ o	Address= Straßenname + PLZ
 -	Ausloggen ist möglich
 
 Übersicht der wichtigtens Gems:
-
+```
 -	Allgemeine
+
 o	Rails		4.2.5
 o	pg		0.15
 o	Sass-rails	5.0
@@ -54,8 +54,10 @@ o	Jquery-rails
 o	Turbolinks
 o	Jbuilder	2.0
 o	Sdoc		0.4.0
-
+```
+```
 -	Weitere für die funktionlität der Seite
+
 o	Devise
 o	Ratyrate
 o	Heroku
@@ -64,11 +66,11 @@ o	Gmaps4rails
 o	Underscore-rails
 o	Geocoder
 o	Rails_12factor
-
+```
 Projektänderungen/ Change Log:
 
 Versionsnummern wurden nicht mitgeführt.
-
+```
 -	Gestaltung des Loginverfahren
 -	Einführung weiterer Gems wie z.B. „Better Errors“
 -	Erste Designanpassungen
@@ -95,6 +97,6 @@ Versionsnummern wurden nicht mitgeführt.
 -	Slideshow auf startseite implementiert
 -	Texte/Inhalte wie „Impressum“ oder „Über Uns“ in Englisch hinzugefügt
 -	User Stories hinzugefügt
-
+```
 
 

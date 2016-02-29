@@ -1,6 +1,6 @@
 User.create!([
-  {email: "erster-nutzer@mail.de", encrypted_password: "$2a$10$I2GLFhgsx.J61R7AmGASz.f6fK2NPhGvtGnqcWtV.UZaBzHpWAZEa", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2016-02-20 14:07:30", last_sign_in_at: "2016-02-20 14:07:30", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1"},
-  {email: "zweiter-nutzer@mail.de", encrypted_password: "$2a$10$sErxj0r4Zsh8Tw85qQN69OjsAfVwDpm19xPYW0BOcl7FnVxLOGqbW", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2016-02-20 14:15:22", last_sign_in_at: "2016-02-20 14:15:22", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1"}
+  {email: "erster-nutzer@mail.de", password: "passwort", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2016-02-20 14:07:30", last_sign_in_at: "2016-02-20 14:07:30", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1"},
+  {email: "zweiter-nutzer@mail.de", password: "$passwort", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2016-02-20 14:15:22", last_sign_in_at: "2016-02-20 14:15:22", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1"}
 ])
 Comment.create!([
   {commentable_type: "Event", commentable_id: 1, user_id: nil, body: "Zeit zum ausrasten!", username: "erster-nutzer@mail.de"},
